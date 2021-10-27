@@ -1,0 +1,45 @@
+base: 'https://typo3v11.ddev.site/'
+rootPageId: 1
+websiteTitle: ''
+errorHandling:
+    -   errorCode: '404'
+        errorContentSource: 't3://page?uid=7'
+        errorHandler: Page
+languages:
+    -   title: French
+        enabled: true
+        base: /
+        typo3Language: fr
+        locale: fr_FR.UTF-8
+        iso-639-1: fr
+        navigationTitle: ''
+        hreflang: fr-FR
+        direction: ''
+        flag: fr
+        languageId: '0'
+routeEnhancers:
+    Permalink:
+        type: Simple
+        routePath: '/{page_name}/{page_uid}/'
+        requirements:
+            page_uid: '[0-9]{1,8}'
+        _arguments:
+            page_uid: 'id'
+        aspects:
+            page_name:
+                type: LocaleModifier
+                default: 'page'
+                localeMap:
+                    -   locale: 'fr_FR.*|fr_CH.*'
+                        value: 'page'
+routes:
+    -   route: robots.txt
+        type: staticText
+        content: |
+            Sitemap: https://typo3v11.ddev.site/robots.txt
+            User-agent: *
+            Allow: /
+            Disallow: /forbidden/
+    -   route: sitemap.xml
+        type: uri
+        source: 't3://page?uid=1&type=1533906435'

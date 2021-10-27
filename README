@@ -1,0 +1,12 @@
+# TYPO3 CMS Base Distribution
+
+This TYPO3 version is called froma Dockerfile to deploy the application on a Kubernetes cluster.
+
+## Prerequisites
+
+* PHP 7.4
+* [Composer](https://getcomposer.org/download/)
+
+## Quickstart
+
+* `composer install -vvv`
