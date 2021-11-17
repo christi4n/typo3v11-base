@@ -3,7 +3,7 @@ rootPageId: 1
 websiteTitle: ''
 errorHandling:
     -   errorCode: '404'
-        errorContentSource: 't3://page?uid=7'
+        errorContentSource: 't3://page?uid=2'
         errorHandler: Page
 languages:
     -   title: French
