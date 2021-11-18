@@ -1,4 +1,4 @@
-base: 'https://typo3v11.ddev.site/'
+base: 'http://localhost/'
 rootPageId: 1
 websiteTitle: ''
 errorHandling:
@@ -36,7 +36,7 @@ routes:
     -   route: robots.txt
         type: staticText
         content: |
-            Sitemap: https://typo3v11.ddev.site/robots.txt
+            Sitemap: http://localhost/robots.txt
             User-agent: *
             Allow: /
             Disallow: /forbidden/
