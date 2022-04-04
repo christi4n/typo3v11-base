@@ -10,3 +10,7 @@ This TYPO3 version is called from a Dockerfile to deploy the application on a Ku
 ## Quickstart
 
 * `composer install -vvv`
+
+### SonarQube
+
+From 04.04.2022, a new workflow is added to make static analysis with SonarQube
